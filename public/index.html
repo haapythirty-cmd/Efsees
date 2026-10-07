@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kwara Life — Live Your Kwara Story</title>
+  <meta name="description" content="Free multiplayer life simulation set in Kwara State, Nigeria. Work, chat, build a life in Ilorin and beyond. Play free in your browser." />
+  <link rel="stylesheet" href="/css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="landing">
+  <header class="topbar">
+    <div class="logo">Kwara Life</div>
+    <nav>
+      <a href="#how">How to Play</a>
+      <a href="#places">Places</a>
+      <a href="#faq">FAQ</a>
+      <a href="/play" class="btn btn-primary">Play Free</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <p class="eyebrow">State of Harmony · Browser Multiplayer</p>
+      <h1>Live your Kwara story</h1>
+      <p class="lead">
+        Create a character, keep six needs alive, work real Kwara jobs, chat with other players,
+        rent a place in Ilorin, and build a life in the State of Harmony — all free in your browser.
+      </p>
+      <div class="hero-actions">
+        <a href="/play" class="btn btn-primary btn-lg">Play Kwara Life Free</a>
+        <button class="btn btn-ghost btn-lg" onclick="document.getElementById('how').scrollIntoView({behavior:'smooth'})">How it works</button>
+      </div>
+      <div class="stats-row">
+        <div class="stat"><span id="online-count">—</span><small>online now</small></div>
+        <div class="stat"><span>18+</span><small>age required</small></div>
+        <div class="stat"><span>Free</span><small>to start</small></div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="map-preview">
+        <div class="place-chip">🕌 Central Mosque</div>
+        <div class="place-chip">🏛️ Emir's Palace</div>
+        <div class="place-chip">🎓 Unilorin</div>
+        <div class="place-chip">⛰️ Sobi Hill</div>
+        <div class="place-chip">🛒 Oja Oba</div>
+        <div class="place-chip">💦 Owu Falls</div>
+        <div class="place-chip">🏟️ Stadium</div>
+        <div class="place-chip">🏺 Pottery</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="how" class="section">
+    <h2>How to play Kwara Life</h2>
+    <div class="steps">
+      <div class="step">
+        <span class="num">1</span>
+        <h3>Sign up free</h3>
+        <p>Create an account in under a minute. No download required. Progress is saved on the server.</p>
+      </div>
+      <div class="step">
+        <span class="num">2</span>
+        <h3>Create your Kwaraian</h3>
+        <p>Choose background, traits and starting home. Your six needs (hunger, energy, fun, social, hygiene, bladder) start ticking immediately.</p>
+      </div>
+      <div class="step">
+        <span class="num">3</span>
+        <h3>Explore & work</h3>
+        <p>Visit real Kwara landmarks, take jobs from market trader to Unilorin lecturer, earn virtual naira, and chat with players nearby.</p>
+      </div>
+      <div class="step">
+        <span class="num">4</span>
+        <h3>Build your life</h3>
+        <p>Upgrade your home, level skills, make friends, and optionally top up virtual naira via Paystack when you want extra boost.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="places" class="section alt">
+    <h2>Places you can visit</h2>
+    <p class="section-lead">Inspired by real Kwara locations. More coming soon.</p>
+    <div class="places-grid">
+      <div class="place-card"><span>🕌</span><strong>Ilorin Central Mosque</strong><small>Worship & community</small></div>
+      <div class="place-card"><span>🏛️</span><strong>Emir's Palace</strong><small>Tradition & events</small></div>
+      <div class="place-card"><span>🎓</span><strong>University of Ilorin</strong><small>Study & lectures</small></div>
+      <div class="place-card"><span>⛰️</span><strong>Sobi Hill</strong><small>Hike & views</small></div>
+      <div class="place-card"><span>🛒</span><strong>Oja Oba Market</strong><small>Trade & food</small></div>
+      <div class="place-card"><span>💦</span><strong>Owu Waterfalls</strong><small>Nature escape</small></div>
+      <div class="place-card"><span>🏟️</span><strong>Kwara Stadium</strong><small>Sports & fitness</small></div>
+      <div class="place-card"><span>🏺</span><strong>Dada Pottery</strong><small>Craft & culture</small></div>
+      <div class="place-card"><span>🌳</span><strong>Metropolitan Park</strong><small>Relax & social</small></div>
+      <div class="place-card"><span>🏨</span><strong>Hotels & Lounges</strong><small>Nightlife</small></div>
+      <div class="place-card"><span>🏥</span><strong>General Hospital</strong><small>Health</small></div>
+      <div class="place-card"><span>📚</span><strong>State Library</strong><small>Knowledge</small></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Careers in Kwara Life</h2>
+    <div class="careers">
+      <div class="career">Market Trader</div>
+      <div class="career">Okada Rider</div>
+      <div class="career">Amala / Food Seller</div>
+      <div class="career">Pottery Artisan</div>
+      <div class="career">Unilorin Lecturer</div>
+      <div class="career">Civil Servant</div>
+      <div class="career">Teacher</div>
+      <div class="career">Farm Worker</div>
+      <div class="career">Hotel Staff</div>
+      <div class="career">Content Creator</div>
+    </div>
+  </section>
+
+  <section id="faq" class="section alt">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq">
+      <details open>
+        <summary>Is Kwara Life free?</summary>
+        <p>Yes. You can create an account and play the full city for free. Optional virtual-naira top-ups are available via Paystack if you want extra spending power. Nothing essential is locked behind payment.</p>
+      </details>
+      <details>
+        <summary>Do I need to download anything?</summary>
+        <p>No. It runs entirely in your browser on desktop or mobile.</p>
+      </details>
+      <details>
+        <summary>Does my progress save?</summary>
+        <p>Yes. When you are logged in, your character, money, needs, home, skills and relationships are saved on the server. You can continue on any device.</p>
+      </details>
+      <details>
+        <summary>Can I chat with other players?</summary>
+        <p>Yes. There is a live global chat and location-based messages so you can talk to people in the same place.</p>
+      </details>
+      <details>
+        <summary>Is this affiliated with Lagos Life?</summary>
+        <p>No. Kwara Life is an independent project inspired by the life-sim genre and the culture of Kwara State. It is not affiliated with the developers of Lagos Life.</p>
+      </details>
+      <details>
+        <summary>Age requirement?</summary>
+        <p>You must be 18 or older to register and play.</p>
+      </details>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div>
+        <strong>Kwara Life</strong>
+        <p>Independent browser life simulation set in Kwara State. Not affiliated with any government or other games.</p>
+      </div>
+      <div>
+        <a href="/play">Play Now</a>
+        <a href="#faq">FAQ</a>
+      </div>
+    </div>
+    <p class="copy">© 2026 Kwara Life · Built for the State of Harmony</p>
+  </footer>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script>
+    // Live online count
+    try {
+      const socket = io();
+      socket.on('online-count', (n) => {
+        const el = document.getElementById('online-count');
+        if (el) el.textContent = n;
+      });
+    } catch (e) {}
+  </script>
+</body>
+</html>

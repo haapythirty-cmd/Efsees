@@ -1,1 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Play Kwara Life</title>
+  <link rel="stylesheet" href="/css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+  <!-- Paystack Inline -->
+  <script src="https://js.paystack.co/v1/inline.js"></script>
+</head>
+<body class="game-body">
+  <!-- Auth Modal -->
+  <div id="auth-modal" class="modal-overlay">
+    <div class="modal">
+      <h2 id="auth-title">Welcome to Kwara Life</h2>
+      <div id="auth-error" class="error hidden"></div>
+      <div id="login-form">
+        <label>Username</label>
+        <input type="text" id="login-user" placeholder="Your username" autocomplete="username" />
+        <label>Password</label>
+        <input type="password" id="login-pass" placeholder="Password" autocomplete="current-password" />
+        <button class="btn btn-primary" onclick="doLogin()">Log In</button>
+        <p class="switch">No account? <a href="#" onclick="showRegister(); return false;">Sign up free</a></p>
+      </div>
+      <div id="register-form" class="hidden">
+        <label>Username</label>
+        <input type="text" id="reg-user" placeholder="Choose a username" />
+        <label>Email (optional)</label>
+        <input type="email" id="reg-email" placeholder="you@email.com" />
+        <label>Password</label>
+        <input type="password" id="reg-pass" placeholder="Create a password" />
+        <button class="btn btn-primary" onclick="doRegister()">Create Account</button>
+        <p class="switch">Already have an account? <a href="#" onclick="showLogin(); return false;">Log in</a></p>
+      </div>
+    </div>
+  </div>
 
+  <!-- Game UI -->
+  <header class="game-header">
+    <div class="logo">Kwara Life</div>
+    <div class="needs-bar" id="needs-bar">
+      <!-- filled by JS -->
+    </div>
+    <div class="header-right">
+      <div class="time-day" id="time-display">Day 1 · 08:00</div>
+      <div class="naira" id="naira-display">₦5,000</div>
+      <button class="btn btn-primary" style="padding:0.4rem 0.8rem;font-size:0.85rem" onclick="openPaystack()">Top Up</button>
+      <span id="player-name" style="font-size:0.9rem;color:var(--muted)"></span>
+    </div>
+  </header>
+
+  <div class="game-main">
+    <div class="game-center">
+      <div class="map-area" id="map-area">
+        <!-- locations rendered by JS -->
+      </div>
+      <div class="action-panel" id="action-panel">
+        <span style="color:var(--muted);font-size:0.85rem;align-self:center">Select a place to see actions</span>
+      </div>
+    </div>
+
+    <aside class="side-panel">
+      <div class="side-tabs">
+        <button class="side-tab active" data-tab="chat" onclick="switchTab('chat')">Chat</button>
+        <button class="side-tab" data-tab="info" onclick="switchTab('info')">You</button>
+        <button class="side-tab" data-tab="jobs" onclick="switchTab('jobs')">Jobs</button>
+      </div>
+      <div class="side-content" id="tab-chat">
+        <div class="chat-messages" id="chat-messages"></div>
+        <div class="chat-input-row">
+          <input type="text" id="chat-input" placeholder="Say something..." maxlength="300" onkeydown="if(event.key==='Enter')sendChat()" />
+          <button onclick="sendChat()">Send</button>
+        </div>
+      </div>
+      <div class="side-content hidden" id="tab-info">
+        <div class="info-block">
+          <strong>Character</strong>
+          <div id="info-username">—</div>
+        </div>
+        <div class="info-block">
+          <strong>Home</strong>
+          <div id="info-home">Face-me-I-face-you</div>
+        </div>
+        <div class="info-block">
+          <strong>Career</strong>
+          <div id="info-career">Unemployed</div>
+        </div>
+        <div class="info-block">
+          <strong>Skills</strong>
+          <div id="info-skills"></div>
+        </div>
+        <button class="btn btn-ghost" style="width:100%;margin-top:0.5rem" onclick="saveNow()">Save Progress</button>
+      </div>
+      <div class="side-content hidden" id="tab-jobs">
+        <div id="jobs-list"></div>
+      </div>
+    </aside>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/js/game.js"></script>
+</body>
+</html>
