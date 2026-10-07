@@ -1,0 +1,11 @@
+node_modules/
+data/users.json
+data/progress/
+.env
+.env.local
+.DS_Store
+*.log
+.vercel
+.next
+dist/
+build/
